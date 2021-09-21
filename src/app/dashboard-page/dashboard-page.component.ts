@@ -16,7 +16,7 @@ export class DashboardPageComponent implements OnInit {
   constructor() {
     this.data = Array.from(Array(16).keys()).map(value => {
       return {
-        id: value,
+        id: value + 1,
         rotate: 90 + (value * 22.5)
       }
     })

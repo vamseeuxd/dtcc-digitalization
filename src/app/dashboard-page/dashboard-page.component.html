@@ -1,5 +1,5 @@
 
-<input type="number" step="22.5" class="form-control w-25 position-fixed" style="z-index:20000;top: 20px;left: 20px;" [(ngModel)]="rotation">
+<!--<input type="number" step="22.5" class="form-control w-25 position-fixed" style="z-index:20000;top: 20px;left: 20px;" [(ngModel)]="rotation">-->
 <div class='circle-container' style="transform: scale(1) rotate({{rotation}}deg);">
   <div class="circle-container-item" *ngFor="let item of data">
     <div class="inner-container item-{{item}}">
@@ -20,3 +20,6 @@
     </div>
   </div>
 </div>
+
+<button (click)="rotation = rotation + 22.5" class="btn text-white shadow-sm bg-transparent border-0 rounded-circle position-fixed" style="top: 45%;left: 32%;">  <i class="fa fa-arrow-circle-o-left" style="font-size: 3rem" aria-hidden="true"></i></button>
+<button (click)="rotation = rotation - 22.5" class="btn text-white shadow-sm bg-transparent border-0 rounded-circle position-fixed" style="top: 45%;right: 32%;">  <i class="fa fa-arrow-circle-o-right" style="font-size: 3rem" aria-hidden="true"></i></button>
