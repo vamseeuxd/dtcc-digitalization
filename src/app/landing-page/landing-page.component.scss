@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  max-width: 100vw;
+  background-color: #005093;
+  background-image: url("../../assets/Landing-Page-Design.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}

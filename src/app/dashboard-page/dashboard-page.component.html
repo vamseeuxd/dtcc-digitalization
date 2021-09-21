@@ -1,0 +1,22 @@
+
+<input type="number" step="22.5" class="form-control w-25 position-fixed" style="z-index:20000;top: 20px;left: 20px;" [(ngModel)]="rotation">
+<div class='circle-container' style="transform: scale(1) rotate({{rotation}}deg);">
+  <div class="circle-container-item" *ngFor="let item of data">
+    <div class="inner-container item-{{item}}">
+      <img src='http://lorempixel.com/100/100/city'>
+      <div style="width: 50%;" class="d-flex mt-2 align-items-center flex-row justify-content-center">
+        <div class="bg-info" style="width: 50%;height: 2px;"></div>
+        <h1 class="text-center text-info mh-100 mx-2 font-weight-bold text-uppercase m-0 p-0">{{item.id}}</h1>
+        <div class="bg-info" style="width: 50%;height: 2px;"></div>
+      </div>
+      <h4 class="text-center font-weight-bold text-uppercase m-0 p-0 mt-2" style="width: 50%">Introducing DTCC</h4>
+      <div class="bg-info mt-3 mb-1" style="width: 50%;height: 2px;"></div>
+      <p class="text-info mt-2 text-center" style="width: 80%;font-size: 10px;">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      </p>
+      <button class="btn btn-warning mt-2 font-weight-bold rounded-pill shadow-sm" style="background-color: #DFD500;border: #DFD500;">Learn More
+      </button>
+    </div>
+  </div>
+</div>

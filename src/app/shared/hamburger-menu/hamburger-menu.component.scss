@@ -1,0 +1,117 @@
+:host {
+  /* Icon 1 */
+  position: fixed;
+  z-index: 100;
+  top: -15px;
+  right: 50px;
+  transform: scale(0.5);
+
+  //colors
+  $white: #ffffff;
+
+  #nav-icon2 {
+    width: 60px;
+    height: 45px;
+    position: relative;
+    margin: 50px auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+
+    span {
+      display: block;
+      position: absolute;
+      height: 9px;
+      width: 50%;
+      background: $white;
+      opacity: 1;
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: rotate(0deg);
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: .25s ease-in-out;
+
+      &:nth-child(even) {
+        left: 50%;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 0 9px 9px 0;
+      }
+
+      &:nth-child(odd) {
+        left: 0;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 9px 0 0 9px;
+      }
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 0;
+      }
+
+      &:nth-child(3) {
+        top: 18px;
+      }
+
+      &:nth-child(4) {
+        top: 18px;
+      }
+
+      &:nth-child(5) {
+        top: 36px;
+      }
+
+      &:nth-child(6) {
+        top: 36px;
+      }
+    }
+
+    &.open span {
+      &:nth-child(1) {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(45deg);
+        left: 5px;
+        top: 7px;
+      }
+
+      &:nth-child(6) {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(45deg);
+        left: calc(50% - 5px);
+        top: 29px;
+      }
+
+      &:nth-child(2) {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(-45deg);
+        left: calc(50% - 5px);
+        top: 7px;
+      }
+
+      &:nth-child(5) {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(-45deg);
+        left: 5px;
+        top: 29px;
+      }
+
+      &:nth-child(3) {
+        left: -50%;
+        opacity: 0;
+      }
+
+      &:nth-child(4) {
+        left: 100%;
+        opacity: 0;
+      }
+    }
+  }
+
+}
